@@ -1,7 +1,9 @@
 import streamlit as st
 import pickle
 import numpy as np
+from nltk.stem import WordNetLemmatizer
 import re
+import nltk
 import  string
 
 model=pickle.load(open('model.pkl','rb'))
@@ -82,5 +84,4 @@ def main():
         st.write('the fare amount Predictis ', output)
 if __name__=='__main__':
     main()
-
 
